@@ -37,6 +37,19 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnFavorito:
                 transaction.replace(R.id.fragments,fragmentFavourite);
             break;
+
+            case R.id.btnLista:
+                transaction.replace(R.id.fragments,fragmentListBreeds);
+                break;
+
+            case R.id.btnDetalles:
+                transaction.replace(R.id.fragments,fragmentDetails);
+                break;
+
+
+            default:
+                transaction.replace(R.id.fragments,fragmentFavourite);
+                break;
         }
 
 

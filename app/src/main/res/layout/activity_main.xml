@@ -6,13 +6,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
 
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/fragments" />
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+
+    <Button
+    android:id="@+id/btnLista"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Lista de razas"
+    android:onClick="onClick"
+    android:gravity="bottom"
+    />
+
+    <Button
+        android:id="@+id/btnDetalles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalles"
+        android:onClick="onClick"
+        android:gravity="bottom"
+        />
 
 
     <Button
@@ -21,6 +40,14 @@
         android:layout_height="wrap_content"
         android:text="Favoritos"
         android:onClick="onClick"
+        android:gravity="bottom"
         />
+   </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_height="wrap_content"
+        android:id="@+id/fragments"
+        android:layout_width="wrap_content" />
 
 </LinearLayout>
