@@ -1,4 +1,4 @@
 package com.example.pruebaandroid.ui;
 
-public class BreedImageListResponse {
+public class BreedImageListFragment {
 }
