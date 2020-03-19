@@ -1,4 +1,4 @@
-package com.example.pruebaandroid;
+package com.example.pruebaandroid.ui;
 
 import android.os.Bundle;
 
@@ -8,13 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.pruebaandroid.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FragmentDetails#newInstance} factory method to
+ * Use the {@link FragmentFavourite#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragmentDetails extends Fragment {
+public class FragmentFavourite extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -24,7 +26,7 @@ public class FragmentDetails extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public FragmentDetails() {
+    public FragmentFavourite() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class FragmentDetails extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentDetails.
+     * @return A new instance of fragment FragmentFavourite.
      */
     // TODO: Rename and change types and number of parameters
-    public static FragmentDetails newInstance(String param1, String param2) {
-        FragmentDetails fragment = new FragmentDetails();
+    public static FragmentFavourite newInstance(String param1, String param2) {
+        FragmentFavourite fragment = new FragmentFavourite();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class FragmentDetails extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_details, container, false);
+        return inflater.inflate(R.layout.fragment_favourite, container, false);
     }
 }

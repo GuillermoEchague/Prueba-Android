@@ -10,6 +10,19 @@ public class BreedListResponse {
     private List<String> breedList;
     private String status;
 
+    public BreedListResponse(List<String> breedList) {
+        this.breedList = breedList;
+    }
+
+    public BreedListResponse(String status) {
+        this.status = status;
+    }
+
+    public BreedListResponse(List<String> breedList, String status) {
+        this.breedList = breedList;
+        this.status = status;
+    }
+
     public List<String> getBreedList() {
         return breedList;
     }

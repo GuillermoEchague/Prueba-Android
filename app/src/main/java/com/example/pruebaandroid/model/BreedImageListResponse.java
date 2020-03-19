@@ -11,6 +11,15 @@ public class BreedImageListResponse {
     private String status;
 
 
+    public BreedImageListResponse(List<String> imageURL, String status) {
+        this.imageURL = imageURL;
+        this.status = status;
+    }
+
+    public BreedImageListResponse(List<String> imageURL) {
+        this.imageURL = imageURL;
+    }
+
     public List<String> getImageURL() {
         return imageURL;
     }
