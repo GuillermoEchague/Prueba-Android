@@ -1,13 +1,16 @@
 package com.example.pruebaandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.pruebaandroid.api.ApiDog;
 import com.example.pruebaandroid.api.RetrofitClient;
@@ -75,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
     /*
     public void onClick(View view) {
         FragmentTransaction transaction =  getSupportFragmentManager().beginTransaction();

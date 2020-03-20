@@ -2,6 +2,7 @@ package com.example.pruebaandroid.adapters;
 
 
 import android.content.Context;
+import android.graphics.drawable.Icon;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +24,7 @@ public class AdapterImageDog extends RecyclerView.Adapter<AdapterImageDog.ViewHo
     private List<String> breedPhoto;
     private Context context;
     private ItemOnClik2 listener;
+    private ImageView imageView;
 
     public AdapterImageDog(List<String> breedPhoto, Context context, ItemOnClik2 listener) {
         this.breedPhoto = breedPhoto;
@@ -40,13 +42,22 @@ public class AdapterImageDog extends RecyclerView.Adapter<AdapterImageDog.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolderDog holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolderDog holder, final int position) {
 
         Log.e("POSITION", String.valueOf(position));
         String breedPhotoList = breedPhoto.get(position);
         Log.e("POSITIONR",String.valueOf(breedPhotoList));
         Glide.with(holder.dogPhotoV.getContext()).load(breedPhotoList)
                 .into(holder.dogPhotoV);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onClick(imageView);
+            }
+        });
+
+
 
 
     }
@@ -68,6 +79,6 @@ public class AdapterImageDog extends RecyclerView.Adapter<AdapterImageDog.ViewHo
     }
 
     public interface ItemOnClik2{
-
+        void onClick(ImageView ImageDog);
     }
 }

@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.pruebaandroid.R;
 import com.example.pruebaandroid.adapters.AdapterImageDog;
@@ -86,5 +88,11 @@ public class FragmentDetails extends Fragment implements AdapterImageDog.ItemOnC
         recyclerView.setLayoutManager(linearLayoutManager);
 
         return view;
+    }
+
+
+    @Override
+    public void onClick(ImageView ImageDog) {
+        Toast.makeText(getContext(),"Agregado a Favoritos",Toast.LENGTH_SHORT).show();
     }
 }
