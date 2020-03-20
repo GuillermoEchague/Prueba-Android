@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.pruebaandroid.R;
 
@@ -26,6 +27,7 @@ public class FragmentFavourite extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
 
     public FragmentFavourite() {
         // Required empty public constructor
@@ -62,9 +64,12 @@ public class FragmentFavourite extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+
+
         return inflater.inflate(R.layout.fragment_favourite, container, false);
     }
 
-    public void show(FragmentManager manager) {
-    }
+
+
 }
