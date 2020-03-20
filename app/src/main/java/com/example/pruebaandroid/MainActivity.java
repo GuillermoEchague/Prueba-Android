@@ -1,6 +1,7 @@
 package com.example.pruebaandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -83,7 +84,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"Fragment Favorito",Toast.LENGTH_SHORT).show();
-
+                FragmentManager manager = getSupportFragmentManager();
+                FragmentFavourite favourite = new FragmentFavourite();
+                favourite.show(manager);
             }
         });
     }
@@ -115,9 +118,6 @@ public class MainActivity extends AppCompatActivity {
               .beginTransaction()
               .add(R.id.fragments, fragmentListBreeds, fragmentListBreeds.getClass().getSimpleName())
       .commit();
-
-
-
     }
 
 /*

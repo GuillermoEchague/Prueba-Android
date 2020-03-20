@@ -3,6 +3,7 @@ package com.example.pruebaandroid.ui;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -62,5 +63,8 @@ public class FragmentFavourite extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_favourite, container, false);
+    }
+
+    public void show(FragmentManager manager) {
     }
 }
