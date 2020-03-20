@@ -53,9 +53,22 @@
 
         />
 
+
     <FrameLayout
-        android:layout_height="match_parent"
+        android:layout_height="420dp"
         android:id="@+id/fragments"
-        android:layout_width="match_parent" />
+        android:layout_width="match_parent"
+       />
+
+    <Button
+        android:id="@+id/btnFavorito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:textStyle="bold"
+        android:text="Favoritos"
+        />
+
+
 
 </LinearLayout>

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String perro1;
 
+    Button btnFavorito;
     TextView textView;
     FrameLayout frameLayout;
 
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     //    getSupportFragmentManager().beginTransaction().add(R.id.fragments,fragmentListBreeds).commit();
 
-        // API
+                // API
 
         ApiDog service = RetrofitClient.getRetrofitInstance().create(ApiDog.class);
         Call<BreedListResponse> call = service.getBreedList();
@@ -76,7 +78,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnFavorito = findViewById(R.id.btnFavorito);
+        btnFavorito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Fragment Favorito",Toast.LENGTH_SHORT).show();
 
+            }
+        });
     }
 
 
@@ -107,6 +116,8 @@ public class MainActivity extends AppCompatActivity {
               .add(R.id.fragments, fragmentListBreeds, fragmentListBreeds.getClass().getSimpleName())
       .commit();
 
+
+
     }
 
 /*
@@ -130,5 +141,10 @@ public class MainActivity extends AppCompatActivity {
     private void initializeViews(){
         textView = findViewById(R.id.textListDog);
         frameLayout = findViewById(R.id.fragments);
+    }
+
+
+    public void onClick(View view) {
+
     }
 }
