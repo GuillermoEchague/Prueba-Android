@@ -1,27 +1,21 @@
 package com.example.pruebaandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.pruebaandroid.api.ApiDog;
 import com.example.pruebaandroid.api.RetrofitClient;
 import com.example.pruebaandroid.model.BreedListResponse;
-import com.example.pruebaandroid.ui.FragmentDetails;
 import com.example.pruebaandroid.ui.FragmentFavourite;
 import com.example.pruebaandroid.ui.FragmentListBreeds;
-import com.google.firebase.firestore.FirebaseFirestore;
+
 
 import java.util.List;
 
@@ -34,18 +28,21 @@ public class MainActivity extends AppCompatActivity {
     FragmentFavourite fragmentFavourite;
 
     private String perro1;
-    private FirebaseFirestore db;
+    //private FirebaseFirestore db;
     private Button btnFavorito;
     TextView textView;
     FrameLayout frameLayout;
+   // Firebase firebase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // StorageReference mStorageRef;
+        //  mStorageRef = FirebaseStorage.getInstance().getReference();
         fragmentFavourite = new FragmentFavourite();
-
+//https://prueba-android-3b4ab.firebaseio.com/
         // API
         ApiDog service = RetrofitClient.getRetrofitInstance().create(ApiDog.class);
         Call<BreedListResponse> call = service.getBreedList();
